@@ -1,0 +1,283 @@
+/* =========================
+   Global Reset & Base
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #0b0f19;
+  --bg-card: #131a2a;
+  --bg-nav: #0f1524;
+  --primary: #6ae3ff;
+  --secondary: #9f8cff;
+  --text-main: #e6e8ef;
+  --text-muted: #a0a4b8;
+  --danger: #ff5c5c;
+  --success: #3ddc97;
+  --border: #1f2a44;
+  --radius: 12px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: radial-gradient(
+    circle at top,
+    #111a33 0%,
+    var(--bg-main) 40%
+  );
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =========================
+   Layout Helpers
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    var(--bg-card),
+    rgba(19, 26, 42, 0.9)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* =========================
+   Navbar
+========================= */
+
+nav {
+  background: linear-gradient(
+    180deg,
+    var(--bg-nav),
+    rgba(15, 21, 36, 0.95)
+  );
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-right: 18px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav button {
+  margin-left: 12px;
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  border: none;
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 20px rgba(106, 227, 255, 0.35);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(106, 227, 255, 0.45);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.danger {
+  background: var(--danger);
+  color: white;
+}
+
+/* =========================
+   Wallet / Dashboard
+========================= */
+
+.wallet-box {
+  margin-top: 24px;
+}
+
+.stat {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.stat span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+/* =========================
+   Games Page
+========================= */
+
+.game-card {
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   Loader
+========================= */
+
+.loader {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* =========================
+   Alerts / Messages
+========================= */
+
+.alert-success {
+  color: var(--success);
+}
+
+.alert-error {
+  color: var(--danger);
+}
+
+/* =========================
+   Utility
+========================= */
+
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+
+.text-center {
+  text-align: center;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 16px;
+  }
+}

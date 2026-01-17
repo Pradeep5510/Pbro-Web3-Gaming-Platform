@@ -1,0 +1,23 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema(
+  {
+    walletAddress: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      index: true
+    },
+    totalRewards: {
+      type: Number,
+      default: 0
+    },
+    lastLoginAt: {
+      type: Date
+    }
+  },
+  { timestamps: true }
+);
+
+export const User = mongoose.model("User", userSchema);
