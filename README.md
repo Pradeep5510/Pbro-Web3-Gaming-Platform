@@ -2,7 +2,7 @@
 
 A full-stack Web3 gaming platform where users connect their wallet, play games, earn tokens, and trade virtual assets.
 
-## 🚀 Features
+##  Features
 - Wallet-based authentication (MetaMask)
 - JWT-secured backend
 - ERC20 reward token (PGT)
@@ -10,7 +10,7 @@ A full-stack Web3 gaming platform where users connect their wallet, play games, 
 - MongoDB user & game history
 - Protected frontend routes
 
-## 🧱 Tech Stack
+## Tech Stack
 **Frontend**
 - React (Vite)
 - ethers.js v6
@@ -28,4 +28,33 @@ A full-stack Web3 gaming platform where users connect their wallet, play games, 
 - OpenZeppelin
 - ERC20 tokenomics
 
-## 📂 Project Structure
+## Project Structure
+frontend/ → React app
+backend/ → API & auth
+contracts/ → Smart contracts
+
+##  Setup (Local)
+
+```bash
+git clone https://github.com/YOUR_USERNAME/web3-gaming-platform.git
+
+cd web3-gaming-platform
+**Backend**
+bash
+cd backend
+npm install
+node index.js
+
+**Frontend**
+bash
+cd frontend
+npm install
+npm run dev
+
+**Contracts**
+cd contracts
+npm install
+npx hardhat compile
+
+👤 Author
+Pradeep Kumar
