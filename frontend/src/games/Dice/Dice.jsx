@@ -5,6 +5,8 @@ export default function Dice() {
   const [roll, setRoll] = useState(null);
 
   return (
+    <>
+      <img style={{ maxWidth: "80%", margin: "5% 10%" }} src="/images/Dice.png" alt="Dice Game" />
     <BaseGame gameId="dice">
       {({ submitResult }) => {
         const play = () => {
@@ -27,5 +29,6 @@ export default function Dice() {
         );
       }}
     </BaseGame>
+    </>
   );
 }

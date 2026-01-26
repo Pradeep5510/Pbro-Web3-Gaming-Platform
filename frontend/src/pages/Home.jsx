@@ -22,6 +22,7 @@ export default function Home() {
           <li>🌐 Trade and own digital assets</li>
           <li>🚀 Be part of the ecosystem before public release</li>
         </ul> 
+        <img style={{ maxWidth: "80%", margin: "5% 10%" }} src="../public/images/image1.png" alt="Early Access" />
          <br />
          Early players aren’t just gamers — they are early adopters shaping the future of PBRO Gaming. <br /> <br />
         <h3>Play now. Earn early. Join the PGT Token Revolution</h3>

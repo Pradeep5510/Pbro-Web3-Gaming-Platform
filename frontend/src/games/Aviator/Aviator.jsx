@@ -8,16 +8,18 @@ export default function Aviator() {
   const crashPoint = useRef((Math.random() * 4 + 1.5).toFixed(2));
 
   return (
-    <BaseGame gameId="aviator">
-      {({ submitResult }) => {
-        const start = () => {
-          setStatus("flying");
-          const interval = setInterval(() => {
-            setMultiplier((m) => +(m + 0.02).toFixed(2));
-            if (multiplier >= crashPoint.current) {
-              clearInterval(interval);
-              setStatus("crashed");
-              submitResult({
+    <>
+      <img style={{ maxWidth: "80%", margin: "5% 10%" }} src="/images/Aviator.png" alt="Early Access" />
+      <BaseGame gameId="aviator">
+        {({ submitResult }) => {
+          const start = () => {
+            setStatus("flying");
+            const interval = setInterval(() => {
+              setMultiplier((m) => +(m + 0.02).toFixed(2));
+              if (multiplier >= crashPoint.current) {
+                clearInterval(interval);
+                setStatus("crashed");
+                submitResult({
                 score: 0,
                 status: "lose",
               });
@@ -46,5 +48,6 @@ export default function Aviator() {
         );
       }}
     </BaseGame>
+    </>
   );
 }
